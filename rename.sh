@@ -1,9 +1,15 @@
 #!/bin/bash
 
-source_folder="./original"
-destination_folder="./renamed"
+if [ "$#" -ne 2 ]; then
+  echo "Usage: $0 <source_folder> <destination_folder>"
+  exit 1
+fi
+
+source_folder="$1"
+destination_folder="$2"
 
 [ -d "$source_folder" ] || { echo "Source folder does not exist."; exit 1; }
+
 [ -d "$destination_folder" ] || mkdir -p "$destination_folder"
 
 for file in "$source_folder"/*.jpg; do
@@ -13,4 +19,3 @@ for file in "$source_folder"/*.jpg; do
 done
 
 echo "Done!"
-
