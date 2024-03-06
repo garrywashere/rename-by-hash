@@ -1,6 +1,6 @@
 # 📋 Rename by Hash
 ## 👀 Overview
-Simple shell script to rename files ending with .jpg by their MD5 hash
+Simple shell script to rename files ending with .jpg by their **MD5** hash
 ## 🚀 Usage
 1. Make the script executable
     ```bash
